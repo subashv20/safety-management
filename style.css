@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display:flex;
+    flex-direction: column;
+ 
+    height: 50vh; /* Set the height to 100% of the viewport */
+    margin: 0;
+    padding: 0;
+}
+
+/* Rest of your styles (h1, .navbar, etc.) remain unchanged */
+
+h1 {
+    color: #333;
+    
+}
+.navbar {
+    list-style-type: none;
+    margin:0;
+    padding: 20px;
+    background-color: #5d11eb;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-left: 200px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar li a:hover {
+    color: #04AA6D;
+}
+
+
+
+#upload-form {
+    margin-top: 20%;
+}
+#file-input {
+    display: none; /* Hide the default file input */
+    
+}
+
+/* Hide these states until needed */
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+    display: none;
+}
+
+
+
+
+/* Add more styling as desired */
+

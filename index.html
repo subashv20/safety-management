@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspection Workflow App</title>
+    <!-- Link your CSS file here -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+    
+
+    <h1>Welcome to the Inspection Workflow App</h1>
+    <!-- Add other elements here (e.g., navigation, forms, etc.) -->
+    <br>
+    <form class="box" method="post" action="" enctype="multipart/form-data">
+        <div class="box__input">
+            <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple><br><br>
+            <label for="file">
+                <strong>Choose a file</strong> 
+                <span class="box__dragndrop">or drag it here</span>
+            </label><br>
+            <button class="box__button" type="submit">Upload</button>
+        </div>
+        <div class="box__uploading">Uploading...</div>
+        <div class="box__success">Done!</div>
+        <div class="box__error">Error! <span></span>.</div>
+    </form>
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+       alert('Welcome to the Inspection Workflow App!');
+          });
+
+        const form = document.querySelector('.box');
+        const fileInput = document.getElementById('file');
+
+        // Handle form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const files = fileInput.files;
+            // Handle file upload (e.g., send files to the server via AJAX)
+            console.log('Uploaded files:', files);
+        });
+
+        // Show drag-and-drop message if supported
+        const supportsDragAndDrop = ('draggable' in document.createElement('div')) ||
+            ('ondragstart' in document.createElement('div') && 'ondrop' in document.createElement('div'));
+
+        if (supportsDragAndDrop) {
+            const dragDropMessage = document.querySelector('.box__dragndrop');
+            dragDropMessage.style.display = 'block';
+        }
+    </script>
+    <!-- At the end of the <body> section in index.html -->
+<script src="script.js"></script>
+
+</body>
+</html>
