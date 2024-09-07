@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workflow Design Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Safety Inspection Workflow</h1>
+    </header>
+
+    <div class="workflow-section">
+      <!-- Toolbox with tasks -->
+      <div class="toolbox">
+        <h2>Drag Tasks</h2>
+        <div class="task" draggable="true" data-task="Task 1">Task 1</div>
+        <div class="task" draggable="true" data-task="Task 2">Task 2</div>
+        <div class="task" draggable="true" data-task="Task 3">Task 3</div>
+      </div>
+
+      <!-- Workflow canvas -->
+      <div class="workflow-canvas" id="canvas">
+        <h2>Workflow Design</h2>
+        <div class="dropzone" id="dropzone">
+          <!-- Tasks will be dropped here -->
+        </div>
+      </div>
+
+      <!-- Preview panel -->
+      <div class="preview">
+        <h2>Workflow Preview</h2>
+        <div id="preview-content">
+          <!-- Workflow preview will be rendered here -->
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <button id="save-workflow">Save Workflow</button>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
